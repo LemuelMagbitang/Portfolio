@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lemuel Magbitang | Multimedia Artist</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Link JS with 'defer' so it runs after HTML loads -->
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- AUTOMATIC HERO BANNER (Pulls from latest gallery items automatically) -->
+  <div class="hero-banner" id="heroBanner"></div>
+
+  <main class="container">
+    
+    <!-- HEADER -->
+    <header class="header">
+      <img src="assets/profile.jpg" alt="Lemuel Magbitang" class="profile-pic">
+      <div class="header-info">
+        <span class="subtext-header">MULTIMEDIA ARTIST</span>
+        <h1 class="name">LEMUEL MAGBITANG</h1>
+        <p class="tagline">2D / 3D / Motion &bull; Freelance Open for Work</p>
+        
+        <div class="social-icons">
+          <a href="https://www.instagram.com/llem_09?stkn=MjJyZnppdnZuMXB4" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@artsoflem?_r=1&_t=ZS-99WQzkZcFst" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://youtube.com/@aol_lem?si=N5Up9vFaqnFI5G1z" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="mailto:lemuelmagbitangt@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <a href="mailto:lemuelmagbitangt@gmail.com" class="email-btn"><i class="fa-solid fa-envelope"></i> EMAIL ME</a>
+      </div>
+    </header>
+
+    <!-- PORTFOLIO SECTION -->
+    <section class="section">
+      <div class="filter-tabs">
+        <button class="tab-btn active" data-filter="all">ALL</button>
+        <button class="tab-btn" data-filter="2d">2D</button>
+        <button class="tab-btn" data-filter="3d">3D</button>
+        <button class="tab-btn" data-filter="motion">MOTION</button>
+      </div>
+
+      <!-- DYNAMIC MASONRY BENTO GRID (Adapts to any image dimension naturally) -->
+      <div class="gallery-grid" id="galleryGrid">
+
+        <div class="gallery-item motion">
+          <video src="assets/motion/animation2.mp4" alt="Motion Graphics Animation"></video>
+        </div>
+
+        <div class="gallery-item 3d">
+          <img src="assets/3d/artwork1.jpg" alt="3D Rendered Scene">
+        </div>
+        
+        <div class="gallery-item motion">
+          <video src="assets/motion/animation1.mp4" alt="Motion Graphics Animation"></video>
+        </div>
+
+        <div class="gallery-item 2d">
+          <img src="assets/2d/artwork4.jpg" alt="2D Concept Art">
+        </div>
+
+        <div class="gallery-item 2d">
+          <img src="assets/2d/artwork3.jpg" alt="2D Concept Art">
+        </div>
+
+        <div class="gallery-item 2d">
+          <img src="assets/2d/artwork2.jpg" alt="2D Concept Art">
+        </div>
+
+        <div class="gallery-item 2d">
+          <img src="assets/2d/artwork1.jpg" alt="2D Concept Art">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- AUTOMATIC HORIZONTAL SCROLLING REVIEWS -->
+    <section class="section">
+      <h2 class="section-title">CLIENT REVIEWS</h2>
+      
+      <div class="marquee-wrapper">
+        <div class="marquee-track">
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Exceptional 3D work! Delivered ahead of deadline."</p>
+            <span class="review-author">— Studio A</span>
+          </div>
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Loved the motion graphics. Very fluid animations."</p>
+            <span class="review-author">— Client B</span>
+          </div>
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Nailed the 2D illustration style on the first try."</p>
+            <span class="review-author">— Game Dev Team</span>
+          </div>
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Great communication and top-tier artistic skills."</p>
+            <span class="review-author">— Client C</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEAVE A REVIEW FORM WITH STAR RATING -->
+      <div class="form-container">
+        <h3 class="form-title">LEAVE A REVIEW</h3>
+        <form class="simple-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+          <input type="text" name="name" placeholder="Your Name / Handle" required>
+          
+          <!-- Star Rating Input -->
+          <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5" required/><label for="star5" title="5 stars">★</label>
+            <input type="radio" id="star4" name="rating" value="4"/><label for="star4" title="4 stars">★</label>
+            <input type="radio" id="star3" name="rating" value="3"/><label for="star3" title="3 stars">★</label>
+            <input type="radio" id="star2" name="rating" value="2"/><label for="star2" title="2 stars">★</label>
+            <input type="radio" id="star1" name="rating" value="1"/><label for="star1" title="1 star">★</label>
+          </div>
+
+          <textarea name="review" rows="3" placeholder="Write your review here..." required></textarea>
+          <button type="submit" class="submit-btn">SUBMIT REVIEW</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- COMMISSIONS / CONTACT FORM -->
+    <section class="section">
+      <h2 class="section-title">START A PROJECT</h2>
+      <div class="form-container">
+        <form class="simple-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <select name="service" required>
+            <option value="" disabled selected>Select Service</option>
+            <option value="2D Illustration">2D Illustration</option>
+            <option value="3D Art">3D Art & Rendering</option>
+            <option value="Motion Graphics">Motion Graphics / Animation</option>
+          </select>
+          <textarea name="message" rows="4" placeholder="Describe project details, budget, and deadline..." required></textarea>
+          <button type="submit" class="submit-btn">SEND MESSAGE</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Lemuel Magbitang. All rights reserved.</p>
+    </footer>
+
+  </main>
+
+  <!-- LIGHTBOX / FULL VIEW MODAL WITH WATERMARK PROTECTION -->
+  <div class="lightbox-modal" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <div class="lightbox-content-wrapper">
+      <!-- Repeating Watermark Overlay -->
+      <div class="watermark-overlay">
+        <span>LEMUEL MAGBITANG &bull; DO NOT COPY</span>
+        <span>LEMUEL MAGBITANG &bull; DO NOT COPY</span>
+        <span>LEMUEL MAGBITANG &bull; DO NOT COPY</span>
+        <span>LEMUEL MAGBITANG &bull; DO NOT COPY</span>
+      </div>
+      <div id="lightboxMediaContainer"></div>
+    </div>
+  </div>
+
+</body>
+</html>
