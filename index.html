@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lemuel Magbitang | Multimedia Artist</title>
+  
+  <!-- Add your custom favicon/logo here -->
+  <link rel="icon" type="image/jpeg" href="assets/profile.jpg">
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Link JS with 'defer' so it runs after HTML loads -->
   <script src="js/script.js" defer></script>
 </head>
 <body>
@@ -22,7 +25,7 @@
       <div class="header-info">
         <span class="subtext-header">MULTIMEDIA ARTIST</span>
         <h1 class="name">LEMUEL MAGBITANG</h1>
-        <p class="tagline">2D / 3D / Motion &bull; Freelance Open for Work</p>
+        <p class="tagline">2D / 3D / Motion &bull; <span class="status-dot"></span> Freelance Open for Work</p>
         
         <div class="social-icons">
           <a href="https://www.instagram.com/llem_09?stkn=MjJyZnppdnZuMXB4" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -30,7 +33,7 @@
           <a href="https://youtube.com/@aol_lem?si=N5Up9vFaqnFI5G1z" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
           <a href="mailto:lemuelmagbitangt@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
         </div>
-        <a href="mailto:lemuelmagbitangt@gmail.com" class="email-btn"><i class="fa-solid fa-envelope"></i> EMAIL ME</a>
+        <a href="mailto:lemuelmagbitangt@gmail.com" class="email-btn">EMAIL ME</a>
       </div>
     </header>
 
@@ -46,31 +49,31 @@
       <!-- DYNAMIC MASONRY BENTO GRID (Adapts to any image dimension naturally) -->
       <div class="gallery-grid" id="galleryGrid">
 
-        <div class="gallery-item motion">
-          <video src="assets/motion/animation2.mp4" alt="Motion Graphics Animation"></video>
+        <div class="gallery-item motion" data-youtube="https://www.youtube.com/shorts/9VeBW7Nd1Hc" data-desc="Motion Graphics Project">
+          <img src="assets/motion/thumbnail2.jpg" alt="Motion Graphics Animation">
         </div>
 
-        <div class="gallery-item 3d">
+        <div class="gallery-item 3d" data-desc="3D Environment Render">
           <img src="assets/3d/artwork1.jpg" alt="3D Rendered Scene">
         </div>
         
-        <div class="gallery-item motion">
-          <video src="assets/motion/animation1.mp4" alt="Motion Graphics Animation"></video>
+        <div class="gallery-item motion" data-youtube="https://www.youtube.com/shorts/0jtvsBLRV7o" data-desc="Animation Reel">
+          <img src="assets/motion/thumbnail1.jpg" alt="Motion Graphics Animation">
         </div>
 
-        <div class="gallery-item 2d">
+        <div class="gallery-item 2d" data-desc="Commission by: Client">
           <img src="assets/2d/artwork4.jpg" alt="2D Concept Art">
         </div>
 
-        <div class="gallery-item 2d">
+        <div class="gallery-item 2d" data-desc="Render Challenge">
           <img src="assets/2d/artwork3.jpg" alt="2D Concept Art">
         </div>
 
-        <div class="gallery-item 2d">
+        <div class="gallery-item 2d" data-desc="Personal Project">
           <img src="assets/2d/artwork2.jpg" alt="2D Concept Art">
         </div>
 
-        <div class="gallery-item 2d">
+        <div class="gallery-item 2d" data-desc="Character Design">
           <img src="assets/2d/artwork1.jpg" alt="2D Concept Art">
         </div>
 
@@ -79,7 +82,6 @@
 
     <!-- AUTOMATIC HORIZONTAL SCROLLING REVIEWS -->
     <section class="section">
-      <h2 class="section-title">CLIENT REVIEWS</h2>
       
       <div class="marquee-wrapper">
         <div class="marquee-track">
@@ -155,14 +157,9 @@
   <!-- LIGHTBOX / FULL VIEW MODAL WITH WATERMARK PROTECTION -->
   <div class="lightbox-modal" id="lightbox">
     <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <div class="lightbox-nav lightbox-prev"><i class="fa-solid fa-chevron-left"></i></div>
+    <div class="lightbox-nav lightbox-next"><i class="fa-solid fa-chevron-right"></i></div>
     <div class="lightbox-content-wrapper">
-      <!-- Repeating Watermark Overlay -->
-      <div class="watermark-overlay">
-        <span>LEMUEL MAGBITANG &bull; DO NOT COPY</span>
-        <span>LEMUEL MAGBITANG &bull; DO NOT COPY</span>
-        <span>LEMUEL MAGBITANG &bull; DO NOT COPY</span>
-        <span>LEMUEL MAGBITANG &bull; DO NOT COPY</span>
-      </div>
       <div id="lightboxMediaContainer"></div>
     </div>
   </div>
