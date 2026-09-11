@@ -75,7 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Check if it's a YouTube link
     if (item.hasAttribute("data-youtube")) {
-      let ytId = item.getAttribute("data-youtube");
+      let rawUrl = item.getAttribute("data-youtube");
+      let ytId = rawUrl;
       
       // Auto-extract ID if user pastes a full URL (including Shorts)
       const match = ytId.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=|shorts\/))([\w-]{11})/);
@@ -83,7 +84,11 @@ document.addEventListener("DOMContentLoaded", () => {
         ytId = match[1];
       }
 
-      mediaContainer.innerHTML = `<iframe src="https://www.youtube.com/embed/${ytId}?autoplay=1" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`;
+      // Check if it's a YouTube Short
+      const isShort = rawUrl.includes('/shorts/');
+      const videoClass = isShort ? 'vertical-video' : 'horizontal-video';
+
+      mediaContainer.innerHTML = `<iframe class="${videoClass}" src="https://www.youtube.com/embed/${ytId}?autoplay=1" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>`;
     } else {
       const media = item.querySelector("img");
       if (media) {
